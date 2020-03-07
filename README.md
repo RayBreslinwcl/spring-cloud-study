@@ -2,6 +2,8 @@
 
 ## 觉得整理的不错的朋友，star一下哟，(*￣︶￣)
 
+- 博客：[https://zpj80231.gitee.io/znote/](https://zpj80231.gitee.io/znote/)
+
 ## 欢迎大家提问题交流
 
 - 项目fork自gongxings/spring-cloud-study，基于自己的理解又添加了修改
