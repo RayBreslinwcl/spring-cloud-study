@@ -19,6 +19,7 @@ public class DeptController {
 
     @Autowired
     private DeptService deptService;
+//    在8001工程的Controller类中增加DiscoveryClient
     @Autowired
     private DiscoveryClient discoveryClient;
 
