@@ -22,8 +22,14 @@ public class DeptConsumerController {
      * 注册再EurekaServer中的微服务名称
      */
     private static final String REST_URL_PREFIX="http://STUDY-SPRINGCLOUD-DEPT";
+    /**
+     * restTemplate非常适合访问restful接口
+     * (url,requestMap ResponseBean.class)
+     * 分别是：REST请求地址、请求参数、HTTP响应转换被转换成的对象类型
+     */
     @Autowired
     private RestTemplate restTemplate;
+
 
     @RequestMapping(value = "/consumer/dept/add")
     public boolean add( DeptEntity deptEntity){
@@ -45,6 +51,7 @@ public class DeptConsumerController {
     @RequestMapping("/consumer/dept/findAll")
     public List<DeptEntity> findAll(){
         //三个参数：url,requestMap ResponseBean.class
+        //List的返回类，是List.class
         return  restTemplate.getForObject(
                 REST_URL_PREFIX+"/dept/findAll",
                 List.class);
