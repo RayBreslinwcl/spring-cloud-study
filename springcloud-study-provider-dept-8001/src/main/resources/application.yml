@@ -11,7 +11,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/study01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
     username: root
-    password: root
+    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -42,14 +42,17 @@ mybatis:
     cache-enabled: true #开启二级缓存
 #客户端注册进eureka服务列表
 eureka:
+  #1
   client:
     #register-with-eureka: false
     #fetch-registry: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
   instance:
+    #2
     #服务实例名称修改
     instance-id: study-springcloud-dept8001
+    #3
     #访问路径显示IP地址
     prefer-ip-address: true
 
