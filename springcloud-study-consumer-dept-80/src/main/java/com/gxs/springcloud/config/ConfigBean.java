@@ -2,6 +2,7 @@ package com.gxs.springcloud.config;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import com.netflix.loadbalancer.RetryRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +32,9 @@ public class ConfigBean {
     @Bean
     public IRule myRule(){
         //指定LoadBalanced的算法 用自带的随机算法
-        return new RandomRule();
+//        return new RandomRule();
+//        先按RoundRobinRule轮询算法获取服务，如果失败则在指定时间内进行重试
+        return new RetryRule();
     }
 
 
