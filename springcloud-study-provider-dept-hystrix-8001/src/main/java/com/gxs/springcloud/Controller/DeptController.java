@@ -29,7 +29,8 @@ public class DeptController {
     }
 
     @RequestMapping(value = "/dept/findById/{deptNo}", method = RequestMethod.GET)
-    //一旦调用服务方法失败并抛出了异常信息之后，会自动调用@HystrixCommand标注好的fallbackMethod，调用类中指定的方法
+    //一旦调用服务方法失败并抛出了异常信息之后，
+    // 会自动调用@HystrixCommand标注好的fallbackMethod，调用类中指定的方法
     @HystrixCommand(fallbackMethod = "processHystrix_Get")
     public DeptEntity findById(@PathVariable("deptNo") Long deptNo) {
         DeptEntity dept = this.deptService.findById(deptNo);
