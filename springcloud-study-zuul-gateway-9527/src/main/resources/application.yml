@@ -15,7 +15,7 @@ eureka:
       # 集群配置
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 
-# 配置zuul的路由映射规则
+## 配置zuul的路由映射规则
 zuul:
   routes:
     mydept.serviceId: study-springcloud-dept  # http://myzuul.com:9527/study-springcloud-dept/dept/findById/1
